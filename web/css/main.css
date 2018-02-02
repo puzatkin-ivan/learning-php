@@ -1,0 +1,37 @@
+.input_data {
+  max-width: 500px;
+}
+
+.link_category {
+  margin-bottom: 100px;
+}
+
+.form-row {
+  max-width: 500px;
+}
+
+.header {
+  background: url("/images/background_header.jpg");
+  min-height: 170px;
+  color: white;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+}
+
+.footer {
+  background: url("/images/background_footer.jpg");
+  min-height: 170px;
+}
+
+.clear {
+  clear: both;
+}
+
+.list_category {
+  display: block;
+  min-height: 500px;
+}
+
+.show_description {
+  margin-top: 50px;
+}

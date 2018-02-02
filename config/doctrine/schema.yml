@@ -1,0 +1,22 @@
+Parameters:
+  columns:
+    id: { type: integer, primary: true }
+    parameter: { type: string(255), notnull: true, unique: true }
+    content: { type: string(255), notnull: true, unique: true }
+
+Categories:
+  columns:
+    name: { type: string(255), notnull: true, unique: true }
+
+Athletes:                    
+  columns:
+    first_name: { type: string(255), notnull: true, unique: false }
+    second_name: { type: string(255), notnull: true, unique: false }
+    rank: { type: string(255), notnull: true, unique: false }
+    biography: { type: blob, notnull: true }
+
+BasicExercises:
+  columns:
+    name: { type: string(255), notnull: true, unique: true }
+    type: { type: string(255), notnull: true, unique: false }
+    description: { type: blob, notnull: true }

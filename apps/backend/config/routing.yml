@@ -1,0 +1,49 @@
+categories_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Categories
+    module:               category
+    prefix_path:          category
+    column:               id
+    with_wildcard_routes: true
+
+indexCategory:
+  url: /:module/indexCategory
+  param: { module: category, action: indexCategory }
+
+showCategory:
+  url: /:module/:id/showCategory
+  param: { module: category, action: showCategory }
+  requirements:
+        id: \d+
+
+editCategory:
+  url: /:module/:id/edit
+  param: { module: category, action: editCategory }
+  requirements:
+        id: \d+
+
+updateCategory:
+  url: /:module/:id/updateCategory
+  param: { module: category, action: updateCategory }
+
+updateParameters:
+  url: /:module/settings/update
+  param: { module: category, action: update }
+
+settingsFrontedPage:
+  url: /:module/settings
+  param: { module: category, action: settings }
+
+settingsDisplay:
+  url: /:module/settingsDisplay
+  param: { module: category, action: settingsDisplay }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: category, action: index }
+
+
+default:
+  url:   /:module/:action/*

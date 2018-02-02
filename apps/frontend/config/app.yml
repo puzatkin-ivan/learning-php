@@ -1,0 +1,6 @@
+# default values
+all:
+  title_of_header: ""
+
+  pathBackgroundHeader: "../images/background_header.jpg"
+  pathBackgroundFooter: "../images/background_footer.jpg"

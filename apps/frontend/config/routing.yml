@@ -1,0 +1,53 @@
+# default rules
+
+indexAthletes:
+  url: /athletes/indexAthletes
+  param: { module: encyclopedia, action: indexAthletes }
+
+indexExercises:
+  url: /exercises/indexExercises
+  param: { module: encyclopedia, action: indexExercises }
+
+show_biography_athlete:
+  url: /athletes/:id
+  param: { module: encyclopedia, action: showAthletes }
+  requirements:
+      id: \d+
+
+create_record_about_athlete:
+  url: /athletes/new
+  param: { module: encyclopedia, action: newAthletes }
+
+create_record_about_exercise:
+  url: /exercises/new
+  param: { module: encyclopedia, action: newExercises }
+
+save_record_about_athelete:
+  url: /athletes/create
+  param: { module: encyclopedia, action: createAthletes }
+
+save_record_about_exercise:
+  url: /exercises/create
+  param: { module: encyclopedia, action: createExercises }
+#edit_description_exercise:
+#  url: /exercises/:id/edit
+#  param: { module: encyclopedia, action: edit }
+#  requirements:
+#      id: \d+
+
+show_description_exercise:
+  url: /exercises/:id
+  param: { module: encyclopedia, action: showExercises }
+  requirements:
+      id: \d+
+
+homepage:
+  url:   /
+  param: { module: encyclopedia, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
